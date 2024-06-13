@@ -6,12 +6,12 @@ import { LoginData } from '../models/model';
 @Injectable()
 export class LoginService {
 
-  private baseUrl = '../backend/auth/login.php';
+  private baseUrl = 'https://test.scribenote.tech/';
   constructor( private http: HttpClient) { }
   loginUser(loginData: LoginData): Observable<any>{
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     }
-    return this.http.post(this.baseUrl, loginData, httpOptions);
+    return this.http.post(this.baseUrl + 'backend/auth/login.php', loginData, httpOptions);
   } 
 }
