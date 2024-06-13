@@ -69,5 +69,7 @@
         }
         $stmt->close(); 
     } 
+
+    
     $conn->close(); 
 ?>
